@@ -10,6 +10,9 @@ install-frontend:
 
 install: install-backend install-frontend
 
+build:
+	cd frontend && yarn build
+
 run-backend:
 	cd backend && ./run.sh
 

@@ -1,0 +1,37 @@
+{
+  "hosting": {
+    "public": "frontend/dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/routes/**",
+        "destination": "https://your-backend-url.com/routes"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      }
+    ]
+  },
+  "functions": {
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint",
+      "npm --prefix \"$RESOURCE_DIR\" run build"
+    ]
+  }
+}

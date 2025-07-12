@@ -1,0 +1,9 @@
+diff --git a/lib/index.js b/lib/index.js
+index 1234567..abcdefg 100644
+--- a/lib/index.js
++++ b/lib/index.js
+@@ -1,3 +1,3 @@
+ // Patch for @stackframe/react
+-// This is a placeholder patch file
++// This is a placeholder patch file for build compatibility
+ module.exports = require('./src/index.js');

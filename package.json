@@ -1,0 +1,19 @@
+{
+  "name": "pantry-sync",
+  "version": "1.0.0",
+  "type": "monorepo",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "install": "make install",
+    "build": "make build",
+    "start": "make run-backend",
+    "dev": "make run-backend"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.9.0"
+  }
+}
